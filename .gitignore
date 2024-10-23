@@ -11,6 +11,21 @@ crash.log
 # Backup state files
 *.tfstate.backup
 
-# .terraform.lock.hcl can be versioned if you want consistent provider versions,
-# but in most cases, it's not necessary.
+# Ignore plan output files
+*.tfplan
+
+# Ignore .tfvars files containing sensitive data
+*.tfvars
+
+# Ignore override files as they are usually machine or environment-specific
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore provider lock files (optional, can be versioned if desired)
 *.terraform.lock.hcl
