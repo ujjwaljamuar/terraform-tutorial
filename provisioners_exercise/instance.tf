@@ -32,3 +32,11 @@ resource "aws_instance" "ec2-2" {
     private_key = file("tf-kp")
   }
 }
+
+output "PublicIP" {
+  value = aws_instance.ec2-2.public_ip
+}
+
+output "PrivateIP" {
+  value = aws_instance.ec2-2.private_ip
+}
